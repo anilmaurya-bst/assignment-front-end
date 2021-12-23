@@ -39,7 +39,8 @@ export const TopApp = () => {
       return(<span key={image.app_name} >
      <Link to={"/AppDetail/"+image.next_page_end_point}  target="_blank"> <span >
         <img   src={image.image_src} alt="" /> </span></Link>
-      <span className="span">{image.app_name}</span>
+        <span class="TBRnV AYi5wd">{image.app_name}</span>
+      
     </span>
      
     )

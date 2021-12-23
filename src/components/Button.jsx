@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback ,useState} from "react";
 import axios from 'axios';
 
  const Button = () => {
@@ -7,6 +7,9 @@ import axios from 'axios';
         method: 'get',
         url: 'https://anil-dot-bluestacks-cloud-beginners.uc.r.appspot.com/rescrapping'
       };
+    
+   
+
       const makeApiCall=()=>{
         
         axios(config)
@@ -20,6 +23,7 @@ import axios from 'axios';
         });
     
       }
+    
      const getData=useCallback(
          () => {
              makeApiCall()
@@ -31,7 +35,7 @@ import axios from 'axios';
          getData();
          console.log("clicked")
      }
-
+     
     return <button onClick={onclick} className="btn">reScrap</button>
 }
 
