@@ -16,7 +16,6 @@ export const TopApp = () => {
     axios(config)
     .then(function (response) {
       setAppData(response.data);
-      //console.log(JSON.stringify(response.data));
     })
     .catch(function (error) {
       console.log(error);
@@ -36,13 +35,14 @@ export const TopApp = () => {
     
     const image = appData[key].map(image => {
       
-      return(<span key={image.app_name} >
-     <Link to={"/AppDetail/"+image.next_page_end_point}  target="_blank"> <span >
-        <img   src={image.image_src} alt="" /> </span></Link>
-        <span class="TBRnV AYi5wd">{image.app_name}</span>
-      
-    </span>
-     
+      return(
+        <div className="center" key={image.app_name} >
+        <div className="center" >
+        <Link to={"/AppDetail/"+image.next_page_end_point}  target="_blank"> 
+         <img  src={image.image_src} alt="" /></Link>
+         <p className="jss">{image.app_name}</p>
+      </div>
+      </div>
     )
    });
    const ele=<div class="task">
